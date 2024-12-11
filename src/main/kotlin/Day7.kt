@@ -24,7 +24,7 @@ fun main() {
     println(calibrationMoveSum(process(getResourceAsText("day7.txt")!!)))
 }
 
-fun process(input: String): List<Pair<Long, List<Long>>> = input.trim().split("\n").map { b ->
+private fun process(input: String): List<Pair<Long, List<Long>>> = input.trim().split("\n").map { b ->
     val a = b.trim().split(": ")
     Pair(a[0].toLong(), a[1].trim().split(" ").map { it.toLong() })
 }
